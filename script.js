@@ -1,4 +1,4 @@
-// Select DOM elements
+// Select DOM elements (IDs remain the same as the HTML structure)
 const goalInput = document.getElementById('goal');
 const roleSelect = document.getElementById('role');
 const contextTextarea = document.getElementById('context');
