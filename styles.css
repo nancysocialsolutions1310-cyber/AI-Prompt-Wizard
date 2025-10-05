@@ -132,16 +132,17 @@ hr {
 
 /* विज्ञापनों के लिए स्थान (लाइट थीम के अनुरूप) */
 .ad-top, .ad-bottom {
-    background-color: #fff; /* कंटेनर के समान सफेद */
-    border: 1px solid #eee;
-    color: #333;
+    /* कंटेनर के समान सफेद बैकग्राउंड */
+    background-color: #fff; 
+    border: 1px solid #eee; /* हल्की बॉर्डर */
+    color: #333; /* टेक्स्ट कलर (अगर विज्ञापन कोड कोई टेक्स्ट डिस्प्ले करे) */
     text-align: center;
     padding: 10px 0;
     margin: 10px auto;
     width: 90%;
     max-width: 640px; 
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* हल्की शैडो */
 }
 
 
@@ -157,3 +158,4 @@ hr {
         font-size: 24px;
     }
 }
+
