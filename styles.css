@@ -1,87 +1,60 @@
-/* सामान्य और पेशेवर पृष्ठभूमि */
+/* सामान्य स्टाइलिंग */
 body {
     font-family: 'Arial', sans-serif;
-    /* प्रोफेशनल ग्रेडिएंट: गहरा नेवी ब्लू से काला */
-    background: linear-gradient(135deg, #0F1C2D 0%, #08101C 100%); 
-    color: #e0e0e0; /* हल्के रंग का टेक्स्ट */
+    background-color: #f4f7f6;
+    color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
 }
 
-/* ग्लासमोर्फिज्म कंटेनर (कोई बदलाव नहीं, यह प्रोफेशनल लुक के लिए एकदम सही है) */
-.glassmorphism {
-    max-width: 650px;
-    margin: 30px auto;
-    padding: 30px;
-    
-    background: rgba(255, 255, 255, 0.15); 
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    /* गोल्डन हाइलाइट बरकरार, पेशेवर टच के लिए */
-    color: #ffcc00; 
+    color: #007bff;
     text-align: center;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 15px;
-    text-shadow: 0 0 8px rgba(255, 204, 0, 0.4);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
 }
 
-.subtitle {
-    text-align: center;
-    color: #ccc;
-    margin-bottom: 30px;
-    font-style: italic;
-}
-
-/* इनपुट और सेलेक्ट फ़ील्ड्स (शब्द दृश्यमान रखने के लिए पिछले बदलावों को बरकरार रखा गया है) */
+/* इनपुट फ़ॉर्म स्टाइलिंग */
 label {
-    color: #fff;
+    display: block;
+    margin-top: 15px;
     font-weight: bold;
+    color: #555;
+}
+
+.required {
+    color: red;
 }
 
 input[type="text"], textarea, select {
     width: 100%;
     padding: 12px;
     margin-top: 5px;
-    
-    color: #333; 
-    background: rgba(255, 255, 255, 0.85); 
-    
-    border: 1px solid rgba(0, 0, 0, 0.2); 
+    border: 1px solid #ccc;
     border-radius: 6px;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
     font-size: 16px;
+    box-sizing: border-box; /* padding और border को width में शामिल करता है */
+    transition: border-color 0.3s;
 }
-
-/* आउटपुट टेक्स्ट एरिया को छोड़कर, सभी इनपुट में dark text सुनिश्चित करना */
-input::placeholder, textarea::placeholder {
-    color: #666;
-}
-
-select {
-    color: #333; 
-}
-
 
 input[type="text"]:focus, textarea:focus, select:focus {
-    /* फोकस के लिए तेज, पेशेवर नीला (Azure Blue) */
-    border-color: #007FFF; 
-    box-shadow: 0 0 8px rgba(0, 127, 255, 0.7); 
+    border-color: #007bff;
     outline: none;
 }
 
-/* जादुई बटन: प्रोफेशनल ग्रेडिएंट (डीप ब्लू) */
-.magic-button {
-    /* प्रोफेशनल ब्लू ग्रेडिएंट */
-    background: linear-gradient(45deg, #007FFF, #005AAB); 
+/* बटन स्टाइलिंग */
+#generate-btn, #copy-btn {
+    background-color: #007bff;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -90,83 +63,54 @@ input[type="text"]:focus, textarea:focus, select:focus {
     font-size: 16px;
     margin-top: 20px;
     width: 100%;
-    /* प्रोफेशनल शैडो */
-    box-shadow: 0 4px 15px rgba(0, 127, 255, 0.5); 
-    transition: transform 0.2s, box-shadow 0.3s;
+    transition: background-color 0.3s;
 }
 
-.magic-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 127, 255, 0.8);
-    background: linear-gradient(45deg, #0099FF, #0066CC);
+#generate-btn:hover, #copy-btn:hover {
+    background-color: #0056b3;
 }
 
-/* कॉपी बटन: प्रोफेशनल ग्रीन (सफलता का प्रतीक) */
-.copy-button {
-    background: linear-gradient(45deg, #28a745, #1e7e34);
-    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+#copy-btn {
+    background-color: #28a745;
 }
 
-.copy-button:hover {
-    background: linear-gradient(45deg, #38c755, #299e44);
-    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.8);
+#copy-btn:hover {
+    background-color: #1e7e34;
 }
 
-/* हॉरिजॉन्टल रूल (Separator) */
 hr {
     border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    border-top: 1px solid #eee;
     margin: 30px 0;
 }
 
-/* आउटपुट टेक्स्ट एरिया */
+/* आउटपुट क्षेत्र स्टाइलिंग */
 #generated-prompt {
-    background: rgba(0, 0, 0, 0.3);
-    color: #e0e0e0;
-    border: 2px dashed #ffcc00;
+    width: 100%;
+    padding: 15px;
+    border: 2px dashed #ccc;
+    border-radius: 6px;
     font-size: 15px;
-    font-family: monospace;
+    background-color: #f9f9f9;
+    resize: vertical; /* उपयोगकर्ता को ऊँचाई बदलने की अनुमति देता है */
 }
 
-/* संदेश क्षेत्र */
 #message {
-    /* फोकस कलर के अनुरूप */
-    color: #007FFF; 
-    text-shadow: 0 0 5px rgba(0, 127, 255, 0.5);
-}
-
-/* विज्ञापनों के लिए स्थान (Ads Space) - बेहतर विज़ुअल इंटीग्रेशन */
-.ad-top, .ad-bottom {
-    /* थीम से मेल खाने के लिए गहरा नेवी बैकग्राउंड */
-    background-color: #0F1C2D; 
-    
-    /* टेक्स्ट को सफ़ेद रखें (अगर विज्ञापन कोड टेक्स्ट डिस्प्ले करता है) */
-    color: #fff; 
-    
     text-align: center;
-    padding: 10px 0;
-    margin: 10px auto;
-    width: 90%;
-    max-width: 640px; 
-    border-radius: 8px;
-    /* हल्की, प्रोफेशनल शैडो */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
+    margin-top: 10px;
+    font-weight: bold;
+    color: #007bff;
 }
 
-/* मोबाइल-फ्रेंडली डिज़ाइन (कोई बदलाव नहीं) */
-@media (max-width: 680px) {
-    .glassmorphism {
+/* मोबाइल-फ्रेंडली डिज़ाइन (Media Query) */
+@media (max-width: 620px) {
+    .container {
         margin: 0;
         border-radius: 0;
         padding: 15px;
     }
-    .ad-top, .ad-bottom {
-        width: 100%;
-        margin: 5px 0;
-        border-radius: 0;
-    }
+
     h1 {
-        font-size: 26px;
+        font-size: 24px;
     }
 }
