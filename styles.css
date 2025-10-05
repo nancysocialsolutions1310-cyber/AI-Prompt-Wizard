@@ -1,82 +1,102 @@
 /*
 ====================================
-AI Prompt Wizard: Old Light Theme
+AI Prompt Wizard: Enhanced Styles
+Theme: Professional Dark, Glassmorphism, High-Visibility
 ====================================
 */
 
-/* सामान्य स्टाइलिंग */
+/* सामान्य और पेशेवर पृष्ठभूमि */
 body {
     font-family: 'Arial', sans-serif;
-    /* हल्का बैकग्राउंड */
-    background-color: #f4f7f6; 
-    color: #333;
+    /* प्रोफेशनल ग्रेडिएंट: गहरा नेवी ब्लू से काला */
+    background: linear-gradient(135deg, #0F1C2D 0%, #08101C 100%); 
+    color: #e0e0e0; /* हल्के रंग का टेक्स्ट */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* सुनिश्चित करता है कि यह पूरी स्क्रीन को कवर करे */
+    min-height: 100vh;
 }
 
-.container {
-    max-width: 600px;
-    margin: 30px auto; /* मार्जिन एडजस्ट किया गया */
-    padding: 30px; /* पैडिंग एडजस्ट किया गया */
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+/* ग्लासमोर्फिज्म कंटेनर */
+.container.glassmorphism { 
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    
+    /* मुख्य ग्लास इफ़ेक्ट */
+    background: rgba(255, 255, 255, 0.15); 
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 h1 {
-    /* प्राथमिक नीला रंग */
-    color: #007bff; 
+    /* गोल्डन हाइलाइट */
+    color: #ffcc00; 
     text-align: center;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 15px; /* पैडिंग एडजस्ट किया गया */
+    /* हल्की, साफ़ बॉर्डर */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+    /* हल्का जादुई ग्लो */
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.4);
 }
 
-/* सबटाइटल */
 .subtitle {
     text-align: center;
-    color: #666;
+    color: #ccc;
     margin-bottom: 30px;
     font-style: italic;
 }
 
-/* इनपुट फ़ॉर्म स्टाइलिंग */
+/* इनपुट और सेलेक्ट फ़ील्ड्स: हाई विजिबिलिटी फिक्स */
 label {
     display: block;
     margin-top: 15px;
     font-weight: bold;
-    color: #555;
+    color: #fff; /* लेबल का रंग सफ़ेद रखा गया */
 }
 
 .required {
-    color: red;
+    color: #FF6B6B; /* सॉफ्ट रेड */
 }
 
-/* विज़िबिलिटी फिक्स: इनपुट में टेक्स्ट का रंग गहरा है */
 input[type="text"], textarea, select {
     width: 100%;
     padding: 12px;
     margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
     
-    /* टेक्स्ट विज़िबिलिटी सुनिश्चित करता है */
+    /* टेक्स्ट विजिबल बनाने के लिए: गहरा रंग */
     color: #333; 
-    background-color: #fff;
+    /* इनपुट बैकग्राउंड: लगभग अपारदर्शी सफेद */
+    background: rgba(255, 255, 255, 0.85); 
+    
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #666;
+}
+
+select {
+    color: #333; 
 }
 
 input[type="text"]:focus, textarea:focus, select:focus {
-    border-color: #007bff;
+    /* फोकस के लिए प्रोफेशनल नीला */
+    border-color: #007FFF; 
+    box-shadow: 0 0 8px rgba(0, 127, 255, 0.7); 
     outline: none;
 }
 
-/* बटन स्टाइलिंग */
-#generate-btn, #copy-btn, .magic-button, .copy-button { /* सभी बटन क्लासेस के लिए */
-    background-color: #007bff;
+/* जादुई बटन (Professional Blue) */
+.magic-button {
+    background: linear-gradient(45deg, #007FFF, #005AAB); /* प्रोफेशनल ब्लू ग्रेडिएंट */
     color: white;
     padding: 12px 20px;
     border: none;
@@ -85,75 +105,81 @@ input[type="text"]:focus, textarea:focus, select:focus {
     font-size: 16px;
     margin-top: 20px;
     width: 100%;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: none; /* लाइट थीम में शैडो की जरूरत नहीं */
+    /* प्रोफेशनल शैडो */
+    box-shadow: 0 4px 15px rgba(0, 127, 255, 0.5); 
+    transition: transform 0.2s, box-shadow 0.3s;
 }
 
-#generate-btn:hover, #copy-btn:hover, .magic-button:hover {
-    background-color: #0056b3;
-    transform: none;
+.magic-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 127, 255, 0.8);
+    background: linear-gradient(45deg, #0099FF, #0066CC);
 }
 
-/* कॉपी बटन के लिए हरा रंग */
-#copy-btn, .copy-button {
-    background-color: #28a745;
+.copy-button {
+    background: linear-gradient(45deg, #28a745, #1e7e34); /* प्रोफेशनल ग्रीन */
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
 }
 
-#copy-btn:hover, .copy-button:hover {
-    background-color: #1e7e34;
+.copy-button:hover {
+    background: linear-gradient(45deg, #38c755, #299e44);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.8);
 }
 
+/* हॉरिजॉन्टल रूल (Separator) */
 hr {
     border: 0;
-    border-top: 1px solid #eee;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
     margin: 30px 0;
 }
 
-/* आउटपुट क्षेत्र स्टाइलिंग */
+/* आउटपुट टेक्स्ट एरिया (जेनरेटेड प्रॉम्प्ट) */
 #generated-prompt {
-    width: 100%;
-    padding: 15px;
-    /* आउटपुट के लिए हल्की डैश वाली बॉर्डर */
-    border: 2px dashed #ccc; 
-    border-radius: 6px;
+    /* इसे डार्क बैकग्राउंड पर हल्का टेक्स्ट रहने दें, क्योंकि यह आउटपुट है */
+    background: rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+    border: 2px dashed #ffcc00;
     font-size: 15px;
-    background-color: #f9f9f9;
+    font-family: monospace;
     resize: vertical;
-    /* टेक्स्ट विज़िबिलिटी सुनिश्चित करता है */
-    color: #333; 
 }
 
+/* संदेश क्षेत्र */
 #message {
     text-align: center;
     margin-top: 10px;
     font-weight: bold;
-    color: #007bff;
+    color: #007FFF; 
+    text-shadow: 0 0 5px rgba(0, 127, 255, 0.5);
 }
 
-/* विज्ञापनों के लिए स्थान (लाइट थीम के अनुरूप) */
+/* विज्ञापनों के लिए स्थान */
 .ad-top, .ad-bottom {
-    background-color: #fff; /* कंटेनर के समान सफेद */
-    border: 1px solid #eee;
-    color: #333;
+    background-color: #08101C; 
+    color: #fff;
     text-align: center;
     padding: 10px 0;
     margin: 10px auto;
     width: 90%;
     max-width: 640px; 
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-
 /* मोबाइल-फ्रेंडली डिज़ाइन (Media Query) */
-@media (max-width: 620px) {
-    .container {
+@media (max-width: 680px) {
+    .container.glassmorphism {
         margin: 0;
         border-radius: 0;
         padding: 15px;
     }
-
+    .ad-top, .ad-bottom {
+        width: 100%;
+        margin: 5px 0;
+        border-radius: 0;
+    }
     h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
 }
