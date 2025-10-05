@@ -1,4 +1,4 @@
-// Select DOM elements (IDs remain the same as the HTML structure)
+// Select DOM elements
 const goalInput = document.getElementById('goal');
 const roleSelect = document.getElementById('role');
 const contextTextarea = document.getElementById('context');
@@ -19,14 +19,12 @@ function showMessage(msg, duration = 3000) {
 
 // Main function to generate the prompt
 generateBtn.addEventListener('click', () => {
-    // Get trimmed input values
     const goal = goalInput.value.trim();
     const role = roleSelect.value;
     const context = contextTextarea.value.trim();
     const tone = toneInput.value.trim();
     const format = formatInput.value.trim();
 
-    // Goal is mandatory
     if (!goal) {
         showMessage('⚠️ Please enter your Goal/Task! This is required.', 5000);
         return;
@@ -68,11 +66,8 @@ generateBtn.addEventListener('click', () => {
     promptParts.push(`- **Verification:** Ensure all facts and information provided are **100% accurate** based on your trained knowledge.`);
     promptParts.push(`- **Clarity:** The response should be concise, clear, and actionable—avoid unnecessary filler or verbose explanations.`);
 
-
-    // Combine the final prompt string, separating sections clearly
     const finalPrompt = promptParts.join('\n\n---\n\n');
 
-    // Display the output
     generatedPromptTextarea.value = finalPrompt;
     showMessage('✅ High-accuracy prompt successfully generated in English!', 5000);
 });
