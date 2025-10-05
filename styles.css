@@ -1,0 +1,167 @@
+/* सामान्य और पेशेवर पृष्ठभूमि */
+body {
+    font-family: 'Arial', sans-serif;
+    /* प्रोफेशनल ग्रेडिएंट: गहरा नेवी ब्लू से काला */
+    background: linear-gradient(135deg, #0F1C2D 0%, #08101C 100%); 
+    color: #e0e0e0; /* हल्के रंग का टेक्स्ट */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* ग्लासमोर्फिज्म कंटेनर (कोई बदलाव नहीं, यह प्रोफेशनल लुक के लिए एकदम सही है) */
+.glassmorphism {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    
+    background: rgba(255, 255, 255, 0.15); 
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+h1 {
+    /* गोल्डन हाइलाइट बरकरार, पेशेवर टच के लिए */
+    color: #ffcc00; 
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.4);
+}
+
+.subtitle {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* इनपुट और सेलेक्ट फ़ील्ड्स (शब्द दृश्यमान रखने के लिए पिछले बदलावों को बरकरार रखा गया है) */
+label {
+    color: #fff;
+    font-weight: bold;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    
+    color: #333; 
+    background: rgba(255, 255, 255, 0.85); 
+    
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    font-size: 16px;
+}
+
+/* आउटपुट टेक्स्ट एरिया को छोड़कर, सभी इनपुट में dark text सुनिश्चित करना */
+input::placeholder, textarea::placeholder {
+    color: #666;
+}
+
+select {
+    color: #333; 
+}
+
+
+input[type="text"]:focus, textarea:focus, select:focus {
+    /* फोकस के लिए तेज, पेशेवर नीला (Azure Blue) */
+    border-color: #007FFF; 
+    box-shadow: 0 0 8px rgba(0, 127, 255, 0.7); 
+    outline: none;
+}
+
+/* जादुई बटन: प्रोफेशनल ग्रेडिएंट (डीप ब्लू) */
+.magic-button {
+    /* प्रोफेशनल ब्लू ग्रेडिएंट */
+    background: linear-gradient(45deg, #007FFF, #005AAB); 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+    /* प्रोफेशनल शैडो */
+    box-shadow: 0 4px 15px rgba(0, 127, 255, 0.5); 
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.magic-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 127, 255, 0.8);
+    background: linear-gradient(45deg, #0099FF, #0066CC);
+}
+
+/* कॉपी बटन: प्रोफेशनल ग्रीन (सफलता का प्रतीक) */
+.copy-button {
+    background: linear-gradient(45deg, #28a745, #1e7e34);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+}
+
+.copy-button:hover {
+    background: linear-gradient(45deg, #38c755, #299e44);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.8);
+}
+
+/* हॉरिजॉन्टल रूल (Separator) */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    margin: 30px 0;
+}
+
+/* आउटपुट टेक्स्ट एरिया */
+#generated-prompt {
+    background: rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+    border: 2px dashed #ffcc00;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+/* संदेश क्षेत्र */
+#message {
+    /* फोकस कलर के अनुरूप */
+    color: #007FFF; 
+    text-shadow: 0 0 5px rgba(0, 127, 255, 0.5);
+}
+
+/* विज्ञापनों के लिए स्थान (कोई बदलाव नहीं) */
+.ad-top, .ad-bottom {
+    background-color: #2c2c2c;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 640px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* मोबाइल-फ्रेंडली डिज़ाइन (कोई बदलाव नहीं) */
+@media (max-width: 680px) {
+    .glassmorphism {
+        margin: 0;
+        border-radius: 0;
+        padding: 15px;
+    }
+    .ad-top, .ad-bottom {
+        width: 100%;
+        margin: 5px 0;
+        border-radius: 0;
+    }
+    h1 {
+        font-size: 26px;
+    }
+}
