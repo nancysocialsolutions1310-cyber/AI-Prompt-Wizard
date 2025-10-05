@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Prompt Wizard</title>
+    <title>AI Prompt Wizard PWA</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#007FFF">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Prompt Wizard">
 </head>
 <body>
-    <div class="container">
+    
+    <div class="ad-top">
+        <p>Your Top Ad Code will go here</p> 
+    </div>
+    <div class="container glassmorphism">
         <h1>AI Prompt Wizard 🧙‍♂️</h1>
-        <p>Generate powerful prompts for any AI — fast & mobile-friendly!</p>
+        <p class="subtitle">Generate powerful prompts for any AI — fast & mobile-friendly!</p>
 
         <div id="prompt-form">
             <label for="goal">Your Goal/Task: <span class="required">*</span></label>
@@ -33,7 +42,7 @@
             <label for="format">Output Format:</label>
             <input type="text" id="format" placeholder="Example: Bulleted List, JSON, Table, Essay">
             
-            <button id="generate-btn">🪄 Generate Prompt</button>
+            <button id="generate-btn" class="magic-button">🪄 Generate Prompt</button>
         </div>
 
         <hr>
@@ -41,11 +50,24 @@
         <div id="result-area">
             <h2>Generated Prompt:</h2>
             <textarea id="generated-prompt" rows="8" readonly placeholder="Your powerful, structured prompt will appear here..."></textarea>
-            <button id="copy-btn">📋 Copy Prompt</button>
+            <button id="copy-btn" class="magic-button copy-button">📋 Copy Prompt</button>
             <p id="message"></p>
         </div>
     </div>
-
+    
+    <div class="ad-bottom">
+        <p>Your Bottom Ad Code will go here</p>
+    </div>
     <script src="script.js"></script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(reg => console.log('Service Worker registered!'))
+                    .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
+    </script>
 </body>
 </html>
