@@ -136,17 +136,22 @@ hr {
     text-shadow: 0 0 5px rgba(0, 127, 255, 0.5);
 }
 
-/* विज्ञापनों के लिए स्थान (कोई बदलाव नहीं) */
+/* विज्ञापनों के लिए स्थान (Ads Space) - बेहतर विज़ुअल इंटीग्रेशन */
 .ad-top, .ad-bottom {
-    background-color: #2c2c2c;
-    color: #fff;
+    /* थीम से मेल खाने के लिए गहरा नेवी बैकग्राउंड */
+    background-color: #0F1C2D; 
+    
+    /* टेक्स्ट को सफ़ेद रखें (अगर विज्ञापन कोड टेक्स्ट डिस्प्ले करता है) */
+    color: #fff; 
+    
     text-align: center;
     padding: 10px 0;
     margin: 10px auto;
     width: 90%;
     max-width: 640px; 
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* हल्की, प्रोफेशनल शैडो */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
 }
 
 /* मोबाइल-फ्रेंडली डिज़ाइन (कोई बदलाव नहीं) */
