@@ -1,27 +1,44 @@
+/*
+====================================
+AI Prompt Wizard: Old Light Theme
+====================================
+*/
+
 /* सामान्य स्टाइलिंग */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7f6;
+    /* हल्का बैकग्राउंड */
+    background-color: #f4f7f6; 
     color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    min-height: 100vh; /* सुनिश्चित करता है कि यह पूरी स्क्रीन को कवर करे */
 }
 
 .container {
     max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 30px auto; /* मार्जिन एडजस्ट किया गया */
+    padding: 30px; /* पैडिंग एडजस्ट किया गया */
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #007bff;
+    /* प्राथमिक नीला रंग */
+    color: #007bff; 
     text-align: center;
     border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+    padding-bottom: 15px; /* पैडिंग एडजस्ट किया गया */
+}
+
+/* सबटाइटल */
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
 }
 
 /* इनपुट फ़ॉर्म स्टाइलिंग */
@@ -36,6 +53,7 @@ label {
     color: red;
 }
 
+/* विज़िबिलिटी फिक्स: इनपुट में टेक्स्ट का रंग गहरा है */
 input[type="text"], textarea, select {
     width: 100%;
     padding: 12px;
@@ -43,8 +61,12 @@ input[type="text"], textarea, select {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
-    box-sizing: border-box; /* padding और border को width में शामिल करता है */
+    box-sizing: border-box;
     transition: border-color 0.3s;
+    
+    /* टेक्स्ट विज़िबिलिटी सुनिश्चित करता है */
+    color: #333; 
+    background-color: #fff;
 }
 
 input[type="text"]:focus, textarea:focus, select:focus {
@@ -53,7 +75,7 @@ input[type="text"]:focus, textarea:focus, select:focus {
 }
 
 /* बटन स्टाइलिंग */
-#generate-btn, #copy-btn {
+#generate-btn, #copy-btn, .magic-button, .copy-button { /* सभी बटन क्लासेस के लिए */
     background-color: #007bff;
     color: white;
     padding: 12px 20px;
@@ -63,18 +85,21 @@ input[type="text"]:focus, textarea:focus, select:focus {
     font-size: 16px;
     margin-top: 20px;
     width: 100%;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: none; /* लाइट थीम में शैडो की जरूरत नहीं */
 }
 
-#generate-btn:hover, #copy-btn:hover {
+#generate-btn:hover, #copy-btn:hover, .magic-button:hover {
     background-color: #0056b3;
+    transform: none;
 }
 
-#copy-btn {
+/* कॉपी बटन के लिए हरा रंग */
+#copy-btn, .copy-button {
     background-color: #28a745;
 }
 
-#copy-btn:hover {
+#copy-btn:hover, .copy-button:hover {
     background-color: #1e7e34;
 }
 
@@ -88,11 +113,14 @@ hr {
 #generated-prompt {
     width: 100%;
     padding: 15px;
-    border: 2px dashed #ccc;
+    /* आउटपुट के लिए हल्की डैश वाली बॉर्डर */
+    border: 2px dashed #ccc; 
     border-radius: 6px;
     font-size: 15px;
     background-color: #f9f9f9;
-    resize: vertical; /* उपयोगकर्ता को ऊँचाई बदलने की अनुमति देता है */
+    resize: vertical;
+    /* टेक्स्ट विज़िबिलिटी सुनिश्चित करता है */
+    color: #333; 
 }
 
 #message {
@@ -101,6 +129,21 @@ hr {
     font-weight: bold;
     color: #007bff;
 }
+
+/* विज्ञापनों के लिए स्थान (लाइट थीम के अनुरूप) */
+.ad-top, .ad-bottom {
+    background-color: #fff; /* कंटेनर के समान सफेद */
+    border: 1px solid #eee;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 640px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
 
 /* मोबाइल-फ्रेंडली डिज़ाइन (Media Query) */
 @media (max-width: 620px) {
